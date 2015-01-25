@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Densidade</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h1 class="h1">Strawberry</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <form id="densidade-app" onSubmit="return run()" role="form">
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-2 form-group">
+                    <p>
+                      <label for="target"><abbr title="Densidade relativa horizontal">Drh</abbr>:</label>
+                      <input type="number" class="form-control" id="target" min="0" max="100" step="0.01" autofocus required/>
+                    </p>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <p>
+                      <label for="target-margin">Margem:</label>
+                      <input type="number" class="form-control" id="target-margin" min="0" max="5" step="0.01" value="0" required/>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-2 form-group">
+                    <p>
+                      <label for="da-min"><abbr title="Densidade absoluta">Da</abbr> mín.:</label>
+                      <input type="number" class="form-control" id="da-min" min="1" step="1" value="1" required/>
+                    </p>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <p>
+                      <label for="da-max"><abbr title="Densidade absoluta">Da</abbr> máx.:</label>
+                      <input type="number" class="form-control" id="da-max" min="1" step="1" value="88" required/>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-2 form-group">
+                    <p>
+                      <label for="a-min"><abbr title="Âmbito">A</abbr> mín.:</label>
+                      <input type="number" class="form-control" id="a-min" min="1" step="1" value="1" required/>
+                    </p>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <p>
+                      <label for="a-max"><abbr title="Âmbito">A</abbr> máx.:</label>
+                      <input type="number" class="form-control" id="a-max" min="1" step="1" value="88" required/>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-2 form-group">
+                    <p>
+                      <label for="t-min"><abbr title="Tempo">T</abbr> mín.:</label>
+                      <input type="number" class="form-control" id="t-min" min="1" step="1" value="1" required/>
+                    </p>
+                  </div>
+                  <div class="col-md-4 form-group">
+                    <p>
+                      <label for="t-max"><abbr title="Tempo">T</abbr> máx.:</label>
+                      <input type="number" class="form-control" id="t-max" min="1" step="1" value="10" required/>
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2 col-md-offset-6">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
+                      Sobre
+                    </button>
+                  </div>
+                  <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Strawberry</h4>
+            </div>
+            <div class="modal-body">
+              <p>
+                Este aplicativo surgiu da necessidade de se controlar densidades texturais musicais para sua utilização em planejamentos
+                composicionais. Tudo está inserido no âmbito de uma pesquisa na área de composição vinculada ao Programa de Pós-Graduação da
+                Universidade Federal da Paraíba e custeada pela Capes.
+              </p>
+              <p>
+                Os cálculos de densidade e conceitos gerais envolvidos na criação deste aplicativo tem como referências os autores Wallace Berry
+                (1987), Didier Gigue (2011), além dos próprios desdobramentos articulados em nossa pesquisa.
+              </p>
+              <p>Pedro Miguel</p>
+              <p>pedromiguelmusica@globomail.com</p>
+              <p>Lattes: <a href="http://lattes.cnpq.br/5304201272096182">Currículo Lattes</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div id="result-area" class="col-md-6 col-md-offset-3">
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="densidade.js"></script>
+  </body>
+</html>
