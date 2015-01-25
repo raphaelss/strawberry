@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+# This file is parte of Strawberry, a html/js app for musical texture density
+# planning released under the MIT license terms.
+# Copyright (c) 2015 Raphael Sousa Santos, http://www.raphaelss.com
+
 
 $html_in = 'densidade.html'
 $js_in = 'densidade.js'

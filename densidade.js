@@ -1,3 +1,8 @@
+/*
+* This file is parte of Strawberry, a html/js app for musical texture density
+* planning released under the MIT license terms.
+* Copyright (c) 2015 Raphael Sousa Santos, http://www.raphaelss.com
+*/
 "use strict";
 
 function drh(density_number, ambitus, time) {
